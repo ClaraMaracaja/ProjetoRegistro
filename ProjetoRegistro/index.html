@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Exercícios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>Cadastro de Exercícios</h1>
+<form id="form-exercicios">
+    <label for="nome">Nome do Exercício:</label>
+    <input type="text" id="nome" required>
+
+    <label for="descricao">Descrição:</label>
+    <textarea id="descricao" required style="height: 100px;"></textarea>
+    <label for="data">Data (dd/mm/yyyy):</label>
+    <input type="text" id="data" required placeholder="dd/mm/yyyy">
+
+    <label for="duracao">Duração (min):</label>
+    <input type="number" id="duracao" required min="1">
+
+    <button type="submit">Cadastrar Exercício</button>
+</form>
+
+<div id="pesquisa">
+    <h2>Pesquisar Exercícios</h2>
+    
+    <label for="pesquisa-tipo-input">Nome:</label>
+    <input type="text" id="pesquisa-tipo-input" placeholder="Digite o nome do exercício...">
+
+    <label for="pesquisa-data-input">Data:</label>
+    <input type="text" id="pesquisa-data-input" placeholder="dd/mm/yyyy">
+
+    <button id="pesquisar-btn">Pesquisar</button>
+</div>
+
+<div id="exercicio-lista">
+    <h2>Lista de Exercícios Cadastrados</h2>
+    <table id="tabela-exercicios">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Data</th>
+                <th>Duração (min)</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
